@@ -1,5 +1,16 @@
 name: Test project
 on: 
+  workflow_dispatch:
+    inputs:
+        options_list:
+          description: 'Options'
+          options:
+            - one
+            - two
+            - three
+        environment:
+          description: 'Environment to run tests against'
+          type: environment
   push:
     branches:
       - main
